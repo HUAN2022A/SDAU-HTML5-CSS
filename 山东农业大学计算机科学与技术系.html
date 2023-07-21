@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>山东农业大学计算机科学与技术系</title>
+    <link rel="stylesheet" href="loser.css">
+</head>
+<body>
+    <!-- 回到顶部 -->
+       <div id="backtop">
+     <!-- <img src="./回到顶部.png" alt=""> -->
+    <button onclick="topFunction()" >
+    <span>回到顶部</span>
+</button>
+</div>     
+    <!-- 回到顶部 -->
+    <div id="top">
+        <!-- 头部左右图标 -->
+        <div id="leftright">
+            <div id="left">
+                <a style="height: 58px;"><img style="color:rgb(136, 0, 255);height:100%;" 
+                    src="./logo.png" alt="农大校徽"/></a>
+                <a style="height: 58px;"><img style="color:rgb(0, 34, 255);height:100%;" 
+                    src="./logo_2.png" alt="南管委"/></a>
+            </div>
+            <div id="right">
+                    <div style="margin-top:23px;" >
+                  
+                         <form method="post" action="">
+                         <input type="text" name="keyword" class="sinput" placeholder="请输入关键字...">
+                                <!-- <input type="submit" value="" class="ssubmit" name="btnsearch"> -->
+                          </form>	
+                    </div>
+                  <div style="width:30px;height:50px;margin-top:23px;"> 
+                     <a style="height: 25px;">
+                     <img style="height: 42%" src="./放大镜图片.png" alt="图片"/>
+                     </a>
+                  </div> 
+                  <div id="search">
+                     <a href="javascript:void(0)"
+                      style="color: rgb(255, 255, 255); font-size: 10px;">搜索</a>
+                  </div>      
+            </div>
+            
+            <!-- <div class="box22">
+                <ul>
+                    <li><a href="#"><strong>首页</strong></a></li>
+                    <li><a href="#"><strong>学院概况</strong></a>
+                        <ul>
+                            <li><a href="#">学院简介</a></li>
+                            <li><a href="#">机构设置</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><strong>师资队伍</strong></a>
+                        <ul>
+                            <li><a href="#">计算机科学与技术系</a></li>
+                            <li><a href="#">公共数学系</a></li>
+                            <li><a href="#">应用物理系</a></li>
+                            <li><a href="#">测绘科学与工程系</a></li>
+                            <li><a href="#">电子与通信工程系</a></li>
+                            <li><a href="#">计算机实验教学中心</a></li>
+                            <li><a href="#">物理实验教学中心</a></li>
+                            <li><a href="#">测绘实验教学中心</a></li>
+                            <li><a href="#">大数据中心</a></li>
+                            <li><a href="#">应用数学系</a></li>
+                            <li><a href="#">数据科学系</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><strong>人才培养</strong></a>
+                        <ul>
+                            <li><a href="#">本科生教育</a></li>
+                            <li><a href="#">研究生教育</a></li>
+                            <li><a href="#">学生学习</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><strong>科学研究</strong></a>
+                        <ul>
+                            <li><a href="#">科研平台</a></li>
+                            <li><a href="#">科研团队</a></li>
+                            <li><a href="#">科研项目</a></li>
+                            <li><a href="#">科研论文</a></li>
+                            <li><a href="#">国家专利</a></li>
+                            <li><a href="#">软件著作权</a></li>
+                            <li><a href="#">科技奖励</a></li>
+                            <li><a href="#">其他</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><strong>学生工作</strong></a></li>
+                    <li><a href="#"><strong>党建工作</strong></a>
+                        <ul>
+                            <li><a href="#">党建学习</a></li>
+                            <li><a href="#">党建活动</a></li>
+                            <li><a href="#">
+                            </div>
+    
+        </div> -->
+<!-- 上面导航bug太多先不做了 -->
+
+<!-- 轮播图 -->
+<div class="carousel">
+  <div class="container">
+      <a href="#" target="_blank"
+          ><img src="./1.jpg"
+      /></a>
+      <a href="#" target="_blank"
+          ><img src="./2.jpg"
+      /></a>
+      <a href="#" target="_blank"
+          ><img src="./3.jpg"
+      /></a>
+      <a href="#" target="_blank"
+      ><img src="./4.jpg"
+  /></a>
+  <a href="#" target="_blank"
+  ><img src="./5.jpg"
+/></a>
+<a href="#" target="_blank"
+><img src="./6.jpg"
+/></a>
+  </div>
+  <div class="shift">
+      <div class="btn left" onclick="leftShift()">&lt;</div>
+      <div class="btn right" onclick="rightShift()">&gt;</div>
+  </div>
+  <div class="bottom"></div>
+</div>
+<!-- 轮播图css-->
+<style>
+  .carousel {
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+      position: relative;
+  }
+  .carousel .container {
+      width: 100%*6;
+      height: 100%;
+      position: relative;
+      left: 0;
+      display: flex;
+      transition: all 1s;
+  }
+
+  .carousel .container a {
+      width: 100%;
+      height: 100%;
+      flex-shrink: 0;
+  }
+
+  .carousel .container a img {
+      width: 100%;
+      height: 100%;
+  }
+
+  .carousel .shift .btn {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin:auto 0;
+      color:rgba(0, 0, 255, 0.548);
+      width: 25px;
+      height: 20px;
+      border-radius: 8px;
+      font-size: 30px;
+      font-weight: bold;
+      line-height: 20px;
+      text-align: center;
+      cursor: pointer;
+      user-select: none;   
+      margin-left: 50px;
+      opacity: 0.4;
+      margin-right: 50px;
+  }
+  .carousel .shift .left {
+      left: 20px;
+
+  }
+  .carousel .shift .right {
+      right: 20px;
+  }
+  .carousel .bottom {
+      position: relative;
+      bottom: 20px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: max-content;
+      display: flex;
+      gap: 6px;
+  }
+  .carousel .bottom .indicator {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+  .carousel:hover .bottom .indicator {
+      opacity: 1;
+  }
+  .carousel:hover .shift .btn {
+      opacity: 1;
+  }
+</style>
+<script>
+// 轮播图需要的js
+  let index = 0
+  let imageCount = document.querySelectorAll(
+      ".carousel .container img"
+  ).length
+
+  const bottom = document.querySelector(".carousel .bottom")
+  for (let i = 0; i < imageCount; i++) {
+      const indicator = document.createElement("div")
+      indicator.classList.add("indicator")
+      indicator.onclick = () => setIndex(i)
+
+      bottom.append(indicator)
+  }
+  function createAuto() {
+      return setInterval(() => {
+          index++
+          refresh()
+      }, 3000)
+  }
+
+  let autoTimer = createAuto()
+
+  function refresh() {
+  if (index < 0) {
+      index = imageCount - 1
+  } else if (index >= imageCount) {
+      index = 0
+  }
+
+        // 获取轮播框元素
+        let carousel = document.querySelector(".carousel")
+
+        //获取轮播框的宽度
+        let width = getComputedStyle(carousel).width
+        width = Number(width.slice(0, -2))
+
+        carousel.querySelector(".container").style.left =
+            index * width * -1 + "px"
+    }
+
+    let refreshWrapper = (func) => {
+        // refresh 装饰器
+        return function (...args) {
+            let result = func(...args)
+            refresh()
+            // 重置自动滚动
+            clearInterval(autoTimer)
+            autoTimer = createAuto()
+            return result
+        }
+    }
+
+    let leftShift = refreshWrapper(() => {
+        index--
+    })
+    let rightShift = refreshWrapper(() => {
+        index++
+    })
+
+    let setIndex = refreshWrapper((idx) => {
+        index = idx
+    })
+    refresh()
+
+ 
+// 点击按钮，返回顶部
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+</script>
+<!-- 中间部分 -->
+<div class="body">
+ <!-- 左边的 -->
+    <div class="bbbody">
+        <div class="box1">
+            师资队伍
+        </div>
+        <ul style="color:#fff">
+            <li><a href="#">计算机科学与技术系</a></li>
+            <hr >
+            <p></p>
+            <li><a href="#">公共数学系</a></li>
+            <hr>
+            <li><a href="#">应用物理系</a></li>
+            <hr>
+            <li><a href="#">测绘科学与工程系</a></li>
+            <hr>
+            <li><a href="#">电子与通信工程系</a></li>
+            <hr>
+            <li><a href="#">计算机实验教学中心</a></li>
+            <hr>
+            <li><a href="#">物理实验教学中心</a></li>
+            <hr>
+            <li><a href="#">测绘实验教学中心</a></li>
+            <hr>
+            <li><a href="#">大数据系</a></li>
+            <hr>
+            <li><a href="#">应用数学系</a></li>
+            <hr>
+            <li> <a href="#">数据科学系</a></li>
+            <hr>
+        </ul>
+    </div>
+ <!-- 右边的 -->
+    <div class="bbody">
+    <table class="tabbe">
+    <div class="box2">
+        计算机科学与技术系&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <a class="aa" href="#">首页</a> <a class="aa" href="#">
+        师资队伍</a> <a class="aa" href="#">计算机科学与技术系</a>
+    </div>
+     <div>
+     <thead>
+        <tr>
+            <th>姓名</th>
+            <th>职称</th>
+            <th>姓名</th>
+            <th>职称</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>费玉奎</td>
+            <td>教授</td>
+            <td><a href="http://xinxi.sdau.edu.cn/_upload/article/files/64/d9/3c484b92445fa64e98eb9191f352/6270b9d9-72b7-49bd-97a6-28aa2abdda15.pdf"
+                    target="_self">朱红梅</a></td>
+            <td>副教授</td>
+        </tr>
+        <tr>
+            <td><a
+                    href="http://xinxi.sdau.edu.cn/_upload/article/files/82/74/933da31a49af9275da17da0b4b55/908617c2-772b-4186-8056-4d992e33d705.pdf">高华</a>
+            </td>
+            <td>教授</td>
+            <td><a href="#">徐洪丽</a></td>
+            <td>副教授</td>
+        </tr>
+        <tr>
+            <td><a href="#">王雅琴</a></td>
+            <td>教授</td>
+            <td><a href="#">杨晓霞</a></td>
+            <td>副教授</td>
+        </tr>
+        <tr>
+            <td><a href="#">张继军</a></td>
+            <td>教授</td>
+            <td><a href="#">于群</a></td>
+            <td>副教授</td>
+        </tr>
+        <tr>
+            <td><a href="#">柳平增</a></td>
+            <td>教授</td>
+            <td><a href="#">张艳</a></td>
+            <td>副教授</td>
+        </tr>
+        <tr>
+            <td><a href="#">葛平俱</a></td>
+            <td>教授</td>
+            <td><a href="#">郭华</a></td>
+            <td>副教授</td>
+        </tr>
+        <tr>
+            <td><a href="#">岳训</a></td>
+            <td>教授</td>
+            <td><a href="#">王媛媛</a></td>
+            <td>副教授</td>
+        </tr>
+        <tr>
+            <td><a href="#">吴秋兰</a></td>
+            <td>教授</td>
+            <td><a href="#">孙倩</a></td>
+            <td>讲师</td>
+        </tr>
+        <tr>
+            <td><a href="#">巩君华</a></td>
+            <td>副教授</td>
+            <td><a href="#">付晓翠</a></td>
+            <td>讲师</td>
+        </tr>
+        <tr>
+            <td><a href="#">姜红花</a></td>
+            <td>教授</td>
+            <td><a href="#">孙未</a></td>
+            <td>讲师</td>
+        </tr>
+        <tr>
+            <td>李光忠</td>
+            <td>副教授</td>
+            <td><a href="#">孙博</a></td>
+            <td>讲师</td>
+        </tr>
+        <tr>
+            <td><a href="#">李蔚妍</a></td>
+            <td>副教授</td>
+            <td><a href="#">王秀丽</a></td>
+            <td>讲师</td>
+        </tr>
+        <tr>
+            <td><a href="#">孙永香</a></td>
+            <td>副教授</td>
+            <td><a href="#">苏平</a></td>
+            <td>讲师</td>
+        </tr>
+        <tr>
+            <td><a href="#">王鲁</a></td>
+            <td>教授</td>
+            <td><a href="#">高葵</a></td>
+            <td>讲师</td>
+        </tr>
+        <tr>
+            <td><a href="#">王志军</a></td>
+            <td>教授</td>
+            <td><a href="#">姚继美</a></td>
+            <td>讲师</td>
+        </tr>
+        <tr>
+            <td><a href="#">陈江林</a></td>
+            <td>副教授</td>
+            <td><a href="#">李雨</a></td>
+            <td>讲师</td>
+        </tr>
+        <tr>
+            <td><a href="#">武装</a></td>
+            <td>副教授</td>
+            <td><a href="#">周倩</a></td>
+            <td>讲师</td>
+        </tr>
+        <tr>
+            <td><a href="#">王玉存</a></td>
+            <td>副教授</td>
+            <td><a href="#">高磊</a></td>
+            <td>讲师</td>
+        </tr>
+        <tr>
+            <td><a href="#">范昊</a></td>
+            <td>副教授</td>
+            <td>郝霞</td>
+            <td>校聘副教授</td>
+        </tr>
+        <tr>
+            <td><a href="#">张承明</a></td>
+            <td>教授</td>
+            <td>朱珂</td>
+            <td>校聘副教授</td>
+        </tr>
+        <tr>
+            <td><a href="#">张广梅</a></td>
+            <td>副教授</td>
+            <td>郭旭超</td>
+            <td></td>
+        </tr>
+       </tbody>
+    </div>
+</table>
+    </div>
+</div>
+<!-- （底部） -->
+   <div id="bottom" style="margin-top: 22px">
+    <div class="box4">
+    <div class="link">
+    <h2 >-----友情链接-----</h2>
+      <div class="links">
+        <a href="http://www.sdau.edu.cn/" target="_blank">山东农业大学 </a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="http://jiaowu.sdau.edu.cn/" target=" _blank">山东农业大学教务处 </a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="http://library.sdau.edu.cn/" target="_blank">图书馆 </a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="http://youth.sdut.edu.cn" target="_blank">青春在线 </a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="http://cnki.net/" target="_blank">中国知网</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://www.chsi.com.cn" target="_blank">学信网 </a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="http://www.ccyl.org.cn" target="_blank">中国共青团 </a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="http://www.moe.gov.cn/" target="_blank">教育部 </a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+      <hr>
+     </div>
+     <div class="box5">
+     <div class="box7">
+    <a href="http://www.sdau.edu.cn/main.htm"><img src="./logo.png" alt="sdau校徽"></a>
+    </div>
+    <div class="box6">
+    <dt>学院概括</dt>
+    <dd><hr></dd>
+    <p></p>
+    <dd>
+    学院简介
+    </dd>
+    <dd>
+    现任领导
+    </dd>
+    <dd>
+    机构设置
+    </dd>
+    <dd>
+    系部简介
+    </dd>
+</div>
+    <div class="box6">
+    <dt>师资队伍</dt>
+    <dd><hr></dd>
+    <p></p>
+    <dd>
+    师资概况
+    </dd>
+    <dd>
+    教师名录
+    </dd>
+    <dd>
+    名师风采
+    </dd>
+    <dd>
+    人才引进
+    </dd> 
+</div>
+    <div class="box6">
+    <dt>
+    学科科研</dt>
+    <dd><hr></dd>
+    <p></p>
+    <dd>
+        <a href="http://xinxi.sdau.edu.cn/3410/list.htm">学科建设</a>
+    </dd>
+    <dd>
+        <a href="http://xinxi.sdau.edu.cn/3417/list.htm">方向与团队</a>
+    </dd>
+    <dd>
+        <a href="http://xinxi.sdau.edu.cn/3420/list.htm">项目与成果</a>
+    </dd>
+    <dd>
+        <a href="http://xinxi.sdau.edu.cn/3411/list.htm">条件与平台</a>
+    </dd>
+</div>
+    <div class="box8">
+    <dt>联系我们</dt>
+    <dd><hr></dd>
+    <p></p>
+    <dd>地址：岱宗校区文理大楼1201</dd>
+    <dd>邮编：271018</dd>
+    <dd>电话：0538-8249275</dd>
+    <dd>邮箱：xxxy@sdau.edu.cn</dd>
+    </div> 
+<hr width="100%;">
+<p style=" color: #a3aebf;text-align: center;;">技术支持：启航科技</p>
+

@@ -1,0 +1,323 @@
+  *{margin: 0%;
+  }
+div,table {	font-size: 14px; }
+a {text-decoration:none;}
+/* #myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  background: url(./回到顶部.png) 
+}
+#myBtn image{
+  width: 40%;
+}
+#myBtn a :hover {
+  background-color: #555;
+  background: none;
+
+} */
+#backtop {
+  width: 40px;
+  height: 20px;
+  /* text-align: center; */
+  position: fixed;
+  right: 10px;
+  bottom: 30px;
+}
+
+#backtop button{
+  cursor: pointer;
+  /* background-image: url(./回到顶部.png); */
+  border: none;
+}
+/* #backtop a {
+  text-decoration: none;
+  color: white;
+}*/
+/* #backtop img {
+  width: 100%;
+}
+#backtop:hover img
+{
+  visibility: hidden;
+} */
+/* #backtop button:hover {
+  background-image:hidden;
+} */
+#backtop:hover span {
+  visibility: visible;
+}
+#backtop span {
+  visibility: hidden;
+  font-size: 14px;
+  font-family: "";
+  line-height: 20px;
+  height: 45px;
+  display: flex;
+  justify-content: space-around;
+  color: grey;
+}
+#top {
+    
+    width: 100%;
+    background: #0168b7 no-repeat;
+    height: 128px;
+}
+#left {
+    margin-left: 260px;
+    margin-top: 10px;
+    width: 40%;
+    display: flex;
+    float: left;
+}
+#right {
+    width: 25%;
+    display: flex;
+    float: right;
+    padding-top: 15px;
+}
+#search {
+    width: 60px;
+    height: 25px;
+    float: right;
+    background-color: #bb0102;
+    color: #fff;
+    text-align: center;
+    line-height: 20px;
+    margin-top: 20px;
+}
+#cin{
+    color: #0168b7;
+}
+.box22 a {
+  color: #fff;
+  width: 180px;
+  height: 20px;
+  
+  display: inline-block;
+  text-align: center;
+  line-height: 40px;
+  font-size: 15px;
+  text-decoration: none;
+}
+.box22 a:hover {
+  color: #000000;
+}
+.box22 li {
+  float: left;
+}
+.box22 ul li ul {
+  width: 180px;
+  text-align: center;
+  position: absolute;
+  display: none;
+}
+.box22 ul li ul li {
+  width: 180px;
+  border-top: 1px solid #8596a4;
+  border-bottom: 1px solid #8596a4;
+  background-color: rgba(189, 181, 181, 0.8);
+  margin: 0px;
+  float: none;
+  text-align: center;
+}
+.box22 ul li:hover ul {
+  display: block;
+}
+.box22 ul li ul li:hover {
+  background-color: red;
+}
+.box22 li {
+  list-style: none;
+}
+
+/* 中间部分 */
+/* 大大盒子 */
+.body
+{
+    margin: 10px auto;
+    width: 1000px;
+    height: 950px;
+    background-color: aliceblue;
+}
+/* 右边 */
+.bbody{
+  float: right;
+  width:812px;
+  height: 800px;
+  }
+  .bbody a{text-decoration: none;
+    color:dimgray;
+  }
+  .tabbe{
+    text-align: center;
+    border-collapse:collapse;
+    margin-left: 90px;
+    margin-top: 20px;
+  }
+  .bbody a:hover{
+    color:#0168b7 ;
+  }
+  .bbody th{
+    width: 150px;
+    height: 37px;
+    border: 1px solid black;
+  }
+  .bbody td{
+    width: 150px;
+    height: 37px;
+    border: 1px solid black;
+  }
+  /* 左边 */
+.bbbody
+{
+float: left;
+width: 180px;
+height: 925px;
+background-color: #0168b7;
+font-size: 10px;
+}
+
+.bbbody a{
+  color: white;
+  text-decoration: none;
+}
+.bbbody li {
+
+  padding: 8px;
+
+}
+.bbbody hr{
+
+  width: 80%;
+}
+.bbbody a:hover{
+  color: #bb0102;
+}
+/* 师资队伍框框 */
+.box1{
+  width: 150px;
+  height: 20px;
+  margin: 10px auto;
+  background-color: #fff;
+  text-align: center;
+  color:#0159b7;
+  /* 边角圆化 */
+  -webkit-border-radius: 10x / 5px;
+  -moz-border-radius: 10px / 5px;
+  border-radius: 10px / 5px;
+  /* 边角圆化 */
+  }
+.box2{
+  width:780px;
+  height:15px;
+  background-color: #0168b7;
+  padding: 10px;
+  color: white;
+
+}
+
+a.aa{
+  color: white;
+}
+a.aa:hover{
+  font-size: 120%;
+  color:white;
+}
+/* 底部 */
+#bottom {
+  width: 100%;
+  background-image: url(./底部.jpg);
+  position: absolute;
+  background-size: cover;
+}
+.box4{
+width: 1000px;
+height: 300px;
+margin-top: 15px;
+margin-left: 300px;
+margin-right: 300px;
+overflow: hidden;
+}
+.link
+{
+  color: white;
+}
+.links a{
+color: white;
+}
+.box5{
+  width: 1000px;
+  height: 400px;
+  color: rgba(255, 255, 255, 0.637);
+}
+.box5 a:link{
+  color:rgba(255, 255, 255, 0.637);
+}
+.box5 a :hover{
+  color: white;
+}
+
+.box7{
+  width: 400px;
+  height:180px;
+  font-size: 14px;
+  text-align: left;
+  float: left;
+}
+.box6{
+  border: 5px;
+  width: 130px;
+  height:180px;
+  font-size: 14px;
+  text-align: left;
+  float: left;
+}
+.box6 dt
+{
+  line-height:25px;
+}
+.box6  dd{
+  line-height:25px;
+}
+.box6 hr{
+  width: 20px;
+  /* float: left; */
+}
+.box8{
+  width: 200px;
+  height:180px;
+  font-size: 14px;
+  text-align: left;
+  float: left;
+}
+.box8 hr{
+  width: 20px;
+  /* float: left; */
+}
+.box8 dd{
+  color:rgba(255, 255, 255, 0.637);
+  font-size: 13px;
+    text-align: left;
+}
+.box8 hr{
+  width: 20px;
+  /* float: left; */
+}
+.box8 dd{
+  color:rgba(255, 255, 255, 0.637);
+  font-size: 13px;
+  line-height:25px;
+    text-align: left;
+}
+.box6 dt
+{
+  line-height:25px;
+}
